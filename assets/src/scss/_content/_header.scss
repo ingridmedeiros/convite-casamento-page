@@ -1,0 +1,34 @@
+// HEADER
+.header {
+    padding: 50px 0 0 0;
+    height: 100vh;
+    background: url("../img/bg-home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    .name {
+        font-family: 'Sacramento', cursive;
+        text-align: center;
+        @include fontSize(90px);
+        color: white;
+    }
+    
+    .arrow {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 45px;
+        text-align: center;
+        .fa-angle-down {
+            @include fontSize(100px);
+            color: white;
+            text-shadow: 0 5px 2px rgba(0,0,0,.43);
+            animation-name: arrowDown;
+            animation-fill-mode: both;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            z-index: 0;
+        }
+    }
+}

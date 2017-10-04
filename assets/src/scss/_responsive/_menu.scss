@@ -1,0 +1,79 @@
+// MENU
+@include mediaQuery('tablet', 'max') {
+    .menu { 
+        position: absolute;
+        top: 0;
+        bottom: initial;
+        background: none;
+    
+        .open-menu {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            padding: 8px 15px;
+            @include fontSize(20px);
+            border-radius: 5px;
+            
+            &[data-active="false"] {
+                border: 1px solid white;
+                .fa-menu::before {
+                    content: "\f0c9";
+                    color: white;
+                }
+            }
+            
+            &[data-active="true"] {
+                .fa-menu::before {
+                    content: "\f00d";
+                    color: #c7c7c7;
+                }
+            }
+        }    
+        
+        .nav {
+            &[data-active="false"] { 
+                visibility: hidden;
+                height: 0;
+                width: 0;
+                padding: 0;
+                margin: 0;
+                position: fixed;
+                right: 0;
+            }
+            
+            &[data-active="true"] { 
+                display: block;
+                height: 100vh;
+                padding-top: 60px;
+                margin-right: 0;
+                background: white;
+                box-shadow: -2px 0px 10px #484848;
+                transition: all 0.5s ease-in-out;
+                max-width: 400px;
+                transition-delay: 0s, 0s, 0.5s;
+            }
+            
+            &__item {
+                padding: 15px 30px;
+                border-bottom: 1px solid #efefef;
+                &:first-child {
+                    border-top: 1px solid #efefef;
+                    margin-top: 20px;
+                }
+            }
+            
+            &__link {
+                font-weight: normal;
+                color: #6f6f6f;
+                
+                &:hover {
+                    padding-left: 8px;
+                    &:after {
+                        transform: scaleX(0);
+                    }
+                }
+            }
+        }
+    }
+}

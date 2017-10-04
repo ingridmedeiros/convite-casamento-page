@@ -1,0 +1,220 @@
+// HOME
+.home {
+    .section {
+        padding: 80px 0;
+        &__first {
+            background-color: #234070;
+            background-image: url(../img/bg-grande-dia.png);
+        }
+        &__third {
+            background-color: #ebc52a;
+            background-image: url(../img/bg-como-chegar.png);
+        }
+        &__fourth {
+            padding: 0;
+        }
+        &__fifth {
+            background-color: #acd1e0;
+        }
+        &__sixth {
+            background-color: #234070;
+            background-image: url(../img/bg-rsvp.png);
+        }
+    }
+    .animation {
+        opacity: 0;
+        transform: translate3d(0,100px,0);
+        transition: .5s;
+        &-init {
+            opacity: 1;
+            transform: translate3d(0,0,0);
+        }
+    }
+    .title {
+        text-transform: uppercase;
+        line-height: 1;
+        &__big {
+            @include fontSize(80px);
+        }
+        &__medium {
+            @include fontSize(65px);
+        }
+        .details {
+            &--right::after {
+                content: '';
+                position: absolute;
+                top: -15px;
+                right: -40px;
+                width: 20%;
+                max-width: 79px;
+                height: 72px;
+                background: url('../img/text-details.png') no-repeat;
+                transform: rotate(80deg);
+                background-size: contain;
+            }
+            &--left::after {
+                content: '';
+                position: absolute;
+                top: -8px;
+                left: -22px;
+                width: 20%;
+                max-width: 79px;
+                height: 72px;
+                background: url('../img/text-details.png') no-repeat;
+                transform: rotate(10deg);
+                background-size: contain;
+            }
+        }
+    }
+    .sub-title {
+        align-items: baseline;
+        
+        &__text {
+            @include fontSize(40px);
+            font-family: 'Sacramento', cursive;
+            // line-height: 2;
+        }
+        
+        &__icon {
+            @include fontSize(54px);
+            margin-right: 20px;
+        }
+    }
+    .info {
+        &--right {
+            &-bottom {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+        
+        .description {
+            &__title {
+                letter-spacing: 0.08em;
+                @include fontSize(18px);
+            }
+            &__text {
+                @include fontSize(17px);
+            }
+        }
+        
+        .view-map {
+            .text {
+                margin-left: 20px;
+                text-transform: uppercase;
+                @include fontSize(20px);
+            }
+            .icon {
+                @include fontSize(70px);
+            }
+        }
+        
+        .fa-gift {
+            @include fontSize(60px);
+        }
+    }
+    .map {
+        padding: 0 15px;
+    }
+    .swiper__home {
+        .row {
+            margin: 0;
+        }
+    }
+    .store {
+        &__figure {
+            max-width: 220px;
+            height: 124px;
+            .img {
+                height: 124px;
+                object-fit: contain;
+            }
+        }
+        .middle {
+            position: relative;
+            &:after,
+            &:before{
+                content: "";
+                height: 75px;
+                width: 2px;
+                background: #253c7d;
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+    .contato {
+        .form {
+            &__contato {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                
+                &--left {
+                    align-self: stretch;
+                    padding: 0;
+                    
+                    .message {
+                        height:100%;
+                    }
+                }
+            }
+            &__input {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 3px;
+                border: 2px solid white;
+                background: transparent;
+                color: white;
+            }
+            &__button {
+                padding: 10px;
+                margin-top: 10px;
+                background: #ebc52a;
+                color: white;
+                @include fontSize(16px);
+                
+            }
+        }
+    }
+}
+
+// DATE - HEADER AND FOOTER
+.date {
+    position: relative;
+    margin-bottom: 40px;
+    @include push--auto;
+        
+    svg {
+        width: 100%;
+        max-width: 340px;
+        fill: white;
+    }
+        
+    &__text {
+        position: absolute;
+        top: 0px;
+        color: #4f483a;
+        @include fontSize(35px);
+        font-weight: 100;
+            
+        &:after,
+        &:before {
+            content: "-";
+            margin: 0 10px;
+        }
+    }
+}
+
+//GO TO TOP
+.goTop {
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 2;
+    font-size: 35px;
+    color: #234070;
+    cursor: pointer;
+}

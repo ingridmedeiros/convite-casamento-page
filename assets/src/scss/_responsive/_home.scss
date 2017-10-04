@@ -1,0 +1,49 @@
+// HOME
+@include mediaQuery('phablet', 'max') {
+    .home {
+        .title {
+            @include fontSize(55px);
+        }
+    }
+}
+@include mediaQuery('phone-wide', 'max') {
+    .home {
+        .title {
+            @include fontSize(35px);
+            
+            .details {
+                &--right::after {
+                    top: -18px;
+                    right: -12px;
+                }
+            }
+        }
+    }
+}
+@include mediaQuery('tablet-small', 'max') {
+    .home {
+        .store {
+            .middle {
+                &:after,
+                &:before{
+                    width: 0;
+                }
+            }
+        }
+    }
+}
+@include mediaQuery('tablet', 'max') {
+    .home {
+        .section__second {
+            padding: 30px 0;
+        }
+        .info {
+            &--right {
+                margin-top: 25px;
+                &-bottom {
+                    position: initial;
+                }
+            }
+        }
+    }
+}

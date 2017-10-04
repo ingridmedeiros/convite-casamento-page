@@ -1,0 +1,13 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ebc52a;
+    z-index: 1;
+    
+    .copyright {
+        padding: 5px 0;
+        @include fontSize(12px);
+        color: #234070;
+    }
+}

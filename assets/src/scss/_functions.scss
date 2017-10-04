@@ -1,0 +1,41 @@
+// Converter px para rem
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+// Centralizar
+@mixin push--auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+// MARGIN BOTTOM
+@for $i from 1 through 20 {
+  .mg-bottom--#{5 * $i} { 
+      margin-bottom: 5px * $i;
+  }
+}
+
+// Animation
+@keyframes arrowDown{
+    0% {
+        transform:translateY(-15%);
+        visibility:visible;
+    }
+    
+    50% {
+        transform:translateY(0);
+    }
+    
+    100% {
+        transform:translateY(-15%)
+    }
+}

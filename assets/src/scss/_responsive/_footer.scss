@@ -1,0 +1,10 @@
+// FOOTER
+@include mediaQuery('tablet', 'max') {
+    .footer {
+        position: relative;
+        
+        .copyright {
+            text-align: center;
+        }
+    }
+}

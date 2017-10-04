@@ -1,0 +1,28 @@
+// HEADER
+@include mediaQuery('phone', 'max') {
+    .date { 
+        svg {
+           max-width: 265px; 
+        }
+        &__text {
+            @include fontSize(25px);
+        }
+    }
+}
+@include mediaQuery('phone-wide', 'max') {
+    .header { 
+        .arrow {
+            .fa-angle-down {
+                @include fontSize(80px);
+            }
+        }
+    }
+}
+@include mediaQuery('tablet', 'max') {
+    .header {
+        padding: 80px 0 0 0;
+        .arrow {
+            bottom: 0;
+        }
+    }
+}

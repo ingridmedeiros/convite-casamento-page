@@ -1,0 +1,51 @@
+// DEFAULT
+    .wrapper {
+        width: 95%;
+        max-width: 900px;
+        margin: auto;
+    }
+    
+    .relative {
+        position: relative;    
+    }
+    
+    .text-color {
+        &__white {
+            color: white;
+        }
+        &__yellow {
+            color: #ebc52a;
+        }
+        &__blue {
+            color: #234070;
+        }
+    }
+    
+    .text__align {
+        &--center {
+            text-align: center;
+        }
+    }
+    
+    .cover {
+        object-fit: cover;
+    }
+    
+    .img-100 {
+        max-width: 100%;
+    }
+
+
+// VISIBILITY
+    .none,
+    .open-menu[data-active="false"] {
+        display: none;
+    }
+    
+    [data-active="true"] {
+        visibility: visible;
+    }
+    
+    .goTop[data-active="false"]{
+        visibility: hidden;
+    }
